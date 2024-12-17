@@ -1,0 +1,82 @@
+﻿<Window x:Class="MainWindowApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MainWindowApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="800">
+
+    <!-- Конвертер для видимости -->
+    <Window.Resources>
+        <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+    </Window.Resources>
+
+    <Window.LayoutTransform>
+        <ScaleTransform ScaleX="{Binding ScaleFactor}" ScaleY="{Binding ScaleFactor}"/>
+    </Window.LayoutTransform>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Исходные изображения -->
+        <Image Margin="0,0,0,680" Source="/Image3.png" Stretch="Fill" Grid.ColumnSpan="2" Visibility="{Binding IsImagesVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+        <Image Grid.ColumnSpan="2" Margin="0,716,0,0" Source="/Image11.png" Stretch="Fill" Visibility="{Binding IsImagesVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+
+        <!-- Текст о клинике -->
+        <StackPanel Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,200,0,0">
+            <TextBlock x:Name="HeaderText" 
+               Text="Ветеринарная клиника 'Мягкие Лапки'" 
+               FontSize="24" FontWeight="Bold" TextAlignment="Center" Margin="0,10"/>
+            <TextBlock x:Name="BodyText1"
+               TextWrapping="Wrap" FontSize="14" TextAlignment="Center" Margin="10,10">
+        Каждый день миллионы домашних животных сталкиваются с различными проблемами со здоровьем, и, 
+        к сожалению, многие владельцы не всегда знают, как правильно реагировать на тревожные симптомы. 
+        В клинике 'Мягкие Лапки' готовы предложить квалифицированную помощь и современное оборудование, 
+        чтобы обеспечить вашему любимцу качественное лечение и заботу.
+            </TextBlock>
+            <TextBlock x:Name="BodyText2" 
+               TextWrapping="Wrap" FontSize="14" TextAlignment="Center" Margin="10,10">
+        Почему здоровье питомца — это приоритет? Более 60% домашних животных сталкиваются с заболеваниями 
+        в течение своей жизни. Ваша забота может сыграть решающую роль в их здоровье. Потеря интереса к играм, 
+        изменения в поведении или даже легкая хромота — всё это сигналы, которые нельзя игнорировать.
+            </TextBlock>
+        </StackPanel>
+        
+            <TextBlock x:Name="BodyText3" 
+               Margin="0,742,186,31" FontSize="7" Foreground="#D66E36"> 
+                © Сеть ветеринарных клиник Мягкие Лапки г. Сургут. 2019-2024
+            </TextBlock>
+
+        <!-- Элементы для слабовидящих -->
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15,500,0,0" Width="350" Grid.ColumnSpan="2">
+            <!-- Выбор контрастности -->
+            <TextBlock Text="Выбор контрастности:" FontSize="14"/>
+            <ComboBox SelectedIndex="{Binding SelectedContrastIndex}" Width="200" Margin="0,5,0,10">
+                <ComboBoxItem Content="Черный текст на белом фоне"/>
+                <ComboBoxItem Content="Белый текст на черном фоне"/>
+                <ComboBoxItem Content="Желтый текст на черном фоне"/>
+            </ComboBox>
+
+            <!-- Выбор шрифта -->
+            <TextBlock Text="Выбор шрифта:" FontSize="14"/>
+            <ComboBox Name="comboBox" SelectionChanged="ComboBox_SelectionChanged" Width="196">
+                <ComboBoxItem Content="Arial"/>
+                <ComboBoxItem Content="Times New Roman"/>
+                <ComboBoxItem Content="Verdana"/>
+            </ComboBox>
+
+            <!-- Изменение расстояния между буквами -->
+            <TextBlock Text="Изменение расстояния между буквами:" FontSize="14"/>
+            <Slider Minimum="0" Maximum="5" Value="{Binding LetterSpacing}" Width="200" Margin="0,5,0,10" ValueChanged="Slider_ValueChanged"/>
+
+            <!-- Отключение изображений -->
+            <Button Content="Отключить изображения" Command="{Binding ToggleImagesCommand}" Width="200" Margin="0,5,0,10"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

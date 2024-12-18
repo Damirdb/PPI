@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MainWindowApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="800">
+        Title="MainWindow" Height="800" Width="1200">
 
     <!-- Конвертер для видимости -->
     <Window.Resources>
@@ -22,53 +22,59 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Image Grid.ColumnSpan="2" Margin="0,0,0,686" Source="/Image11.png" Stretch="Fill" Visibility="{Binding IsImagesVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+        <Image Grid.ColumnSpan="2" Margin="0,0,0,662" Source="/Image11.png" Stretch="Fill" Visibility="{Binding IsImagesVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
 
 
         <!-- Исходные изображения -->
-        <Image Margin="464,31,-864,649" Source="/Image3.png" Stretch="Fill" Visibility="{Binding IsImagesVisible, Converter={StaticResource BoolToVisibilityConverter}}" Grid.Column="1"/>
-        <Button Content="О клинике" Width="115" Height="29" Margin="6,122,0,0"
+        <Button Content="О клинике" Width="115" Height="29" Margin="40,143,0,0"
 HorizontalAlignment="Left" VerticalAlignment="Top"
 Click="ClinicButton_Click"/>
-        <Button Content="Услуги" Width="115" Height="29" Margin="137,122,0,0"
+        <Button Content="Услуги" Width="115" Height="29" Margin="228,143,0,0"
 HorizontalAlignment="Left" VerticalAlignment="Top"
 Click="UslugButton_Click"/>
-        <Button Content="Забота о Животных" Width="115" Height="29" Margin="275,122,0,0"
+        <Button Content="Забота о Животных" Width="115" Height="29" Margin="426,143,0,0"
 HorizontalAlignment="Left" VerticalAlignment="Top"
 Click="CareButton_Click"/>
-        <Button Content="Продукты" Width="115" Height="29" Margin="10,122,0,0"
+        <Button Content="Продукты" Width="115" Height="29" Margin="58,143,0,0"
 HorizontalAlignment="Left" VerticalAlignment="Top"
 Click="ProductButton_Click" Grid.Column="1"/>
-        <Button Content="Отзывы" Width="115" Height="29" Margin="148,122,0,0"
+        <Button Content="Отзывы" Width="115" Height="29" Margin="227,143,0,0"
 HorizontalAlignment="Left" VerticalAlignment="Top"
 Click="ReviewsButton_Click" Grid.Column="1"/>
-        <Button Content="Контакты" Width="115" Height="29" Margin="275,122,0,0"
+        <Button Content="Контакты" Width="115" Height="29" Margin="394,143,0,0"
 HorizontalAlignment="Left" VerticalAlignment="Top"
 Click="ContactsButton_Click" Grid.Column="1"/>
-        <Button Content="Запись на прием" Width="115" Height="29" Margin="275,38,0,0"
+        <Button Content="Запись на прием" Width="115" Height="29" Margin="462,44,0,0"
 HorizontalAlignment="Left" VerticalAlignment="Top"
 Click="RecordButton_Click" Grid.Column="1"/>
         <Image Grid.ColumnSpan="2" Margin="0,691,0,0" Source="/Image11.png" Stretch="Fill" Visibility="{Binding IsImagesVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
 
 
         <!-- Текст о клинике -->
-            <TextBlock x:Name="HeaderText" 
+        <TextBlock x:Name="HeaderText" 
                Text="Ветеринарная клиника 'Мягкие Лапки'" 
                FontSize="24" FontWeight="Bold" TextAlignment="Center" Margin="130,197,130,505" Grid.ColumnSpan="2"/>
-            <TextBlock x:Name="BodyText1"
-               TextWrapping="Wrap" FontSize="14" TextAlignment="Center" Margin="15,365,15,279" Grid.ColumnSpan="2"><Run Text="Каждый день миллионы домашних животных сталкиваются с различными проблемами со здоровьем, и, к сожалению, многие владельцы не всегда знают, как правильно реагировать на тревожные симптомы. В клинике 'Мягкие Лапки' готовы предложить квалифицированную помощь и современное оборудование, чтобы обеспечить вашему любимцу качественное лечение и заботу."/></TextBlock>
-            <TextBlock x:Name="BodyText2" 
-               TextWrapping="Wrap" FontSize="14" TextAlignment="Center" Margin="10,259,10,466" Grid.ColumnSpan="2"><Run Text="Почему здоровье питомца — это приоритет? Более 60% домашних животных сталкиваются с заболеваниями в течение своей жизни. Ваша забота может сыграть решающую роль в их здоровье. Потеря интереса к играм, изменения в поведении или даже легкая хромота — всё это сигналы, которые нельзя игнорировать."/></TextBlock>
+        <TextBlock x:Name="BodyText1"
+               TextWrapping="Wrap" FontSize="14" TextAlignment="Center" Margin="0,465,0,109" Grid.ColumnSpan="2"><Run Text="Каждый день миллионы домашних животных сталкиваются с различными проблемами со здоровьем, и, к сожалению, многие владельцы не всегда знают, как правильно реагировать на тревожные симптомы. В клинике 'Мягкие Лапки' готовы предложить квалифицированную помощь и современное оборудование, чтобы обеспечить вашему любимцу качественное лечение и заботу."/></TextBlock>
+        <TextBlock x:Name="BodyText2" 
+               TextWrapping="Wrap" FontSize="14" TextAlignment="Center" Margin="0,272,0,340" Grid.ColumnSpan="2"><Run Text="Почему здоровье питомца — это приоритет? Более 60% домашних животных сталкиваются с заболеваниями в течение своей жизни. Ваша забота может сыграть решающую роль в их здоровье. Потеря интереса к играм, изменения в поведении или даже легкая хромота — всё это сигналы, которые нельзя игнорировать."/></TextBlock>
         <TextBlock x:Name="BodyText6" 
-       Margin="0,707,10,0" FontSize="7" Foreground="#D66E36" Grid.Column="1" VerticalAlignment="Top" Height="34" TextDecorations="Underline" RenderTransformOrigin="0.498,0.482" HorizontalAlignment="Right"><Run Text="Контакты "/><LineBreak/><Run Text="Телефон: +7 (343) 381-87-87 "/><LineBreak/><Run Text="Почта: info@vetdoctor.ru"/></TextBlock>
-        <Image Margin="0,0,319,686" Source="/uyvs9X3SI1s_thumbnail 2.png" Stretch="Fill"/>
+       Margin="0,696,3,0" FontSize="7" Foreground="#D66E36" Grid.Column="1" VerticalAlignment="Top" Height="65" TextDecorations="Underline" RenderTransformOrigin="0.498,0.482" HorizontalAlignment="Right" Width="170" FlowDirection="RightToLeft"><Run Text="Контакты "/><LineBreak/><Run Text="Телефон: +7 (343) 381-87-87 "/><LineBreak/><Run Text="Почта: info@vetdoctor.ru"/></TextBlock>
+        <Image Margin="0,0,445,662" Source="/uyvs9X3SI1s_thumbnail 2.png" Stretch="Fill"/>
         <TextBlock x:Name="BodyText4" 
-            Margin="97,12,36,693" FontSize="25" Foreground="#D66E36"><Run Text="Ветеринарная клиника "/><LineBreak/><Run Text="“Мягкие Лапки”"/></TextBlock>
+            Margin="155,0,484,662" FontSize="20" Foreground="#D66E36" RenderTransformOrigin="0.269,0.249" Grid.ColumnSpan="2" VerticalAlignment="Center"><Run Text="Ветеринарная клиника "/><LineBreak/><Run Text="“Мягкие Лапки”"/></TextBlock>
         <TextBlock x:Name="BodyText5" 
-       Margin="154,46,154,703" FontSize="10" Foreground="#D6B236" Grid.Column="1" TextDecorations="Underline" RenderTransformOrigin="0.5,0.349"><Run Text="+7 (343) 381-87-87"/></TextBlock>
+       Margin="0,37,214,711" Foreground="#D6B236" Grid.Column="1" TextDecorations="Underline" RenderTransformOrigin="0.276,0.17" HorizontalAlignment="Right" Width="188"><Run Text="+7 (343) 381-87-87"/></TextBlock>
         <TextBlock x:Name="BodyText3" 
-               Margin="10,714,0,0" FontSize="7" Foreground="#D66E36" VerticalAlignment="Top" Height="20" HorizontalAlignment="Left"><Run Text="© Сеть ветеринарных клиник Мягкие Лапки "/><LineBreak/><Run Text="г. Сургут. 2019-2024"/></TextBlock>
-        <ComboBox HorizontalAlignment="Left" Margin="194,712,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
+               Margin="10,703,0,0" FontSize="7" Foreground="#D66E36" VerticalAlignment="Top" Height="58" HorizontalAlignment="Left"><Run Text="© Сеть ветеринарных клиник Мягкие Лапки "/><LineBreak/><Run Text="г. Сургут. 2019-2024"/></TextBlock>
+        <ComboBox HorizontalAlignment="Left" Margin="300,710,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="100%" Tag="1.0" />
+            <ComboBoxItem Content="150%" Tag="1.5" />
+            <ComboBoxItem Content="200%" Tag="2.0" />
+        </ComboBox>
+
+
+
 
 
     </Grid>

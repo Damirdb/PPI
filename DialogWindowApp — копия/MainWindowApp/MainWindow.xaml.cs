@@ -81,13 +81,44 @@ namespace MainWindowApp
         }
 
         // Обновляем масштаб при изменении значения слайдера
-        
+
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (sender is ComboBox comboBox && comboBox.SelectedItem is ComboBoxItem selectedItem)
+            if (e.AddedItems.Count > 0 && e.AddedItems[0] is ComboBoxItem selectedItem)
             {
-                MessageBox.Show($"Вы выбрали: {selectedItem.Content}");
+                try
+                {
+                    // Преобразуем значение масштаба
+                    double scaleFactor = Convert.ToDouble(selectedItem.Tag, System.Globalization.CultureInfo.InvariantCulture);
+
+                    // Изменение размера текста в текстовых блоках
+                    HeaderText.FontSize = 24 * scaleFactor;
+                    BodyText1.FontSize = 14 * scaleFactor;
+                    BodyText2.FontSize = 14 * scaleFactor;
+                    BodyText3.FontSize = 7 * scaleFactor;
+                    BodyText4.FontSize = 25 * scaleFactor;
+                    BodyText5.FontSize = 10 * scaleFactor;
+                    BodyText6.FontSize = 7 * scaleFactor;
+
+                    // Применение масштаба для кнопок
+                    foreach (var child in LogicalTreeHelper.GetChildren(this))
+                    {
+                        if (child is Button button)
+                        {
+                            button.Width = 115 * scaleFactor;  // Базовая ширина кнопки
+                            button.Height = 29 * scaleFactor;  // Базовая высота кнопки
+                            button.FontSize = 12 * scaleFactor;  // Базовый размер шрифта
+                        }
+                    }
+
+                    // Применение общего масштаба
+                    this.LayoutTransform = new ScaleTransform(scaleFactor, scaleFactor);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка преобразования масштаба: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
         }
 
@@ -107,7 +138,7 @@ namespace MainWindowApp
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        
+
     }
 
     // Реализация команды

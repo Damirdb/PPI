@@ -14,3 +14,19 @@ C:\Users\User\Desktop\DialogWindowApp\MainWindowApp\obj\Debug\MainWindowApp.cspr
 C:\Users\User\Desktop\DialogWindowApp\MainWindowApp\obj\Debug\MainWindowApp.exe
 C:\Users\User\Desktop\DialogWindowApp\MainWindowApp\obj\Debug\MainWindowApp.pdb
 C:\Users\User\Desktop\DialogWindowApp\MainWindowApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\User\Desktop\DialogWindowApp — копия\MainWindowApp\bin\Debug\MainWindowApp.exe.config
+C:\Users\User\Desktop\DialogWindowApp — копия\MainWindowApp\bin\Debug\MainWindowApp.exe
+C:\Users\User\Desktop\DialogWindowApp — копия\MainWindowApp\bin\Debug\MainWindowApp.pdb
+C:\Users\User\Desktop\DialogWindowApp — копия\MainWindowApp\obj\Debug\MainWindowApp.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\DialogWindowApp — копия\MainWindowApp\obj\Debug\MainWindow.g.cs
+C:\Users\User\Desktop\DialogWindowApp — копия\MainWindowApp\obj\Debug\App.g.cs
+C:\Users\User\Desktop\DialogWindowApp — копия\MainWindowApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\User\Desktop\DialogWindowApp — копия\MainWindowApp\obj\Debug\MainWindowApp_MarkupCompile.cache
+C:\Users\User\Desktop\DialogWindowApp — копия\MainWindowApp\obj\Debug\MainWindowApp_MarkupCompile.lref
+C:\Users\User\Desktop\DialogWindowApp — копия\MainWindowApp\obj\Debug\MainWindow.baml
+C:\Users\User\Desktop\DialogWindowApp — копия\MainWindowApp\obj\Debug\MainWindowApp.g.resources
+C:\Users\User\Desktop\DialogWindowApp — копия\MainWindowApp\obj\Debug\MainWindowApp.Properties.Resources.resources
+C:\Users\User\Desktop\DialogWindowApp — копия\MainWindowApp\obj\Debug\MainWindowApp.csproj.GenerateResource.cache
+C:\Users\User\Desktop\DialogWindowApp — копия\MainWindowApp\obj\Debug\MainWindowApp.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\DialogWindowApp — копия\MainWindowApp\obj\Debug\MainWindowApp.exe
+C:\Users\User\Desktop\DialogWindowApp — копия\MainWindowApp\obj\Debug\MainWindowApp.pdb
